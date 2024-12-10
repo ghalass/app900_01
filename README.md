@@ -1,7 +1,12 @@
-php artisan make:model Site
-php artisan make:livewire sites
-php artisan make:factory SiteFactory
-php artisan make:migration create_sites_table
+# SITE
+
+## php artisan make:model Site
+
+## php artisan make:livewire sites
+
+## php artisan make:factory SiteFactory
+
+## php artisan make:migration create_sites_table
 
 php artisan make:model Typeparc
 php artisan make:livewire typeparcs
