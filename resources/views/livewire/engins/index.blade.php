@@ -1,6 +1,6 @@
 <div>
 
-    @include('livewire.commun.header')
+    @include('livewire.typeparcs.header')
 
     @include('livewire.typeparcs.table')
 
@@ -8,6 +8,6 @@
 
     @include('livewire.typeparcs.modal_delete')
 
-    @include('livewire.commun.scripts')
+    @include('livewire.typeparcs.scripts')
 
 </div>

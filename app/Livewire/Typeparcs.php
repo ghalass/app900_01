@@ -114,8 +114,11 @@ class Typeparcs extends Component
         sleep(1);
         $nbr = ceil(Typeparc::count() / 10);
         for ($i = 1; $i <= $nbr; $i++) {
-
             array_push($this->pagination_options, $i * 10);
+        }
+
+        if (count($this->pagination_options) < 1) {
+            array_push($this->pagination_options, 10);
         }
 
         if (!$this->q) {

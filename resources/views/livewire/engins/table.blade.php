@@ -1,7 +1,7 @@
 <table class="table table-sm table-hover ">
     <thead>
         <th>#</th>
-        <th>Type parc</th>
+        <th>typeparc</th>
         <th>Description</th>
         <th>Action</th>
     </thead>
