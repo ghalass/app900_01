@@ -14,4 +14,8 @@ class ConfigController extends Controller
     {
         return view('configs.sites');
     }
+    public function typeparcs()
+    {
+        return view('configs.typeparcs');
+    }
 }

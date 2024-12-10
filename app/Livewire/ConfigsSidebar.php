@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Site;
+use App\Models\Typeparc;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
@@ -13,7 +14,7 @@ class ConfigsSidebar extends Component
     public function render()
     {
         $sites_count = Site::count();
-        $typeparcs_count = 11;
+        $typeparcs_count = Typeparc::count();
 
         $data = [
             'sites_count'       => $sites_count,

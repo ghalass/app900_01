@@ -49,4 +49,5 @@ Route::post('/admin/dashboard/register', [AdminRegisterController::class, 'store
 Route::prefix('configs')->group(function () {
     Route::get('/', [ConfigController::class, 'index'])->name('configs');
     Route::get('/sites', [ConfigController::class, 'sites'])->name('configs.sites');
+    Route::get('/typeparcs', [ConfigController::class, 'typeparcs'])->name('configs.typeparcs');
 });

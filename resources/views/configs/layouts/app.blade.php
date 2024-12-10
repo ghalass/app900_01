@@ -1,25 +1,5 @@
 @extends('layouts.app')
 
-@php
-    $list_config = [
-        [
-            'title' => 'Configs',
-            'route' => 'configs',
-            'icon' => 'bi bi-gear',
-        ],
-        [
-            'title' => 'Sites',
-            'route' => 'configs.sites',
-            'icon' => 'bi bi-geo-alt',
-        ],
-        [
-            'title' => 'Typeparcs',
-            'route' => 'configs.sites',
-            'icon' => 'bi bi-geo-alt',
-        ],
-    ];
-@endphp
-
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">

@@ -14,7 +14,7 @@
         ],
         [
             'title' => 'Typeparcs',
-            'route' => 'configs.sites',
+            'route' => 'configs.typeparcs',
             'icon' => 'bi bi-geo-alt',
             'count' => $typeparcs_count ?? 0,
         ],
