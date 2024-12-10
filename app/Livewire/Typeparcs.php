@@ -51,7 +51,7 @@ class Typeparcs extends Component
 
             $this->formReset();
             $this->dispatch('close-modal');
-            $this->dispatch('site-added');
+            $this->dispatch('record-crud');
         }
     }
 
@@ -97,7 +97,7 @@ class Typeparcs extends Component
         $this->dispatch('warning', ['message' => 'Supprimé avec succès!']);
         $this->formReset();
         $this->dispatch('close-modal');
-        $this->dispatch('site-deleted');
+        $this->dispatch('record-crud');
     }
 
     use WithPagination;
@@ -128,7 +128,7 @@ class Typeparcs extends Component
         }
 
 
-        return view('livewire.typeparcs', [
+        return view('livewire.typeparcs.index', [
             'typeparcs' => $typeparcs
         ]);
     }
