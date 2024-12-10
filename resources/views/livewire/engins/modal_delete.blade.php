@@ -4,14 +4,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="deleteModalLabel">
-                    Supprimer un typeparc
+                    Supprimer un engin
                 </h1>
                 <button wire:click="formReset" type="button" class="btn-close" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
 
             <div class="modal-body">
-                <p class="text-danger">Voulez-vous vraiment supprimer ce typeparc?</p>
+                <p class="text-danger">Voulez-vous vraiment supprimer ce engin?</p>
                 <p class="text-info">{{ $name }}</p>
             </div>
             <div class="modal-footer">

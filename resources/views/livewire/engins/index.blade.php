@@ -1,13 +1,13 @@
 <div>
 
-    @include('livewire.typeparcs.header')
+    @include('livewire.commun.header')
 
-    @include('livewire.typeparcs.table')
+    @include('livewire.engins.table')
 
-    @include('livewire.typeparcs.modal_create')
+    @include('livewire.engins.modal_create')
 
-    @include('livewire.typeparcs.modal_delete')
+    @include('livewire.engins.modal_delete')
 
-    @include('livewire.typeparcs.scripts')
+    @include('livewire.commun.scripts')
 
 </div>

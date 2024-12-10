@@ -33,6 +33,6 @@ class ConfigsSidebar extends Component
             'organes_count'         => Organe::count(),
         ];
 
-        return view('livewire.configs-sidebar', $data);
+        return view('livewire.commun.configs-sidebar', $data);
     }
 }

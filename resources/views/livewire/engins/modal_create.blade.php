@@ -5,9 +5,9 @@
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="createModalLabel">
                     @if (isset($id))
-                        Modifier un typeparc
+                        Modifier un engin
                     @else
-                        Ajouter un typeparc
+                        Ajouter un engin
                     @endif
                 </h1>
                 <button wire:click="formReset" type="button" class="btn-close" data-bs-dismiss="modal"
@@ -17,12 +17,61 @@
                 <div class="modal-body">
                     <div class="form-floating mb-3">
                         <input wire:model='name' type="text" class="form-control @error('name') is-invalid @enderror"
-                            id="floatingInput" placeholder="typeparc">
-                        <label for="floatingInput">Typeparc</label>
+                            id="floatingInput" placeholder="Parc">
+                        <label for="floatingInput">Engin</label>
                         @error('name')
                             <p class="text-danger fst-italic fw-lighter">{{ $message }}</p>
                         @enderror
                     </div>
+
+                    <div class="form-floating mb-3">
+                        <select wire:model.change='typeparc_id' class="form-select" id="floatingSelect"
+                            aria-label="Floating label select example">
+                            <option></option>
+                            @foreach ($typeparcs as $typeparc)
+                                <option value="{{ $typeparc->id }}">
+                                    {{ $typeparc->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                        <label for="floatingSelect">Type parc</label>
+                        @error('typeparc_id')
+                            <p class="text-danger fst-italic fw-lighter">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <select wire:model.change='parc_id' wire:target='typeparc_id' wire:loading.attr='disabled'
+                            class="form-select" id="floatingSelectParc" aria-label="Floating label select example">
+                            <option></option>
+                            @if ($parcs)
+                                @foreach ($parcs as $parc)
+                                    <option {{ $parc->id == $parc_id ? ' selected ' : '' }} value="{{ $parc->id }}">
+                                        {{ $parc->name }}
+                                    </option>
+                                @endforeach
+                            @endif
+                        </select>
+                        <label for="floatingSelectParc">Parc</label>
+                        @error('parc_id')
+                            <p class="text-danger fst-italic fw-lighter">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <select wire:model='site_id' class="form-select" id="floatingSelectSite"
+                            aria-label="Floating label select example">
+                            <option></option>
+                            @foreach ($sites as $site)
+                                <option value="{{ $site->id }}">{{ $site->name }}</option>
+                            @endforeach
+                        </select>
+                        <label for="floatingSelectSite">Site</label>
+                        @error('site_id')
+                            <p class="text-danger fst-italic fw-lighter">{{ $message }}</p>
+                        @enderror
+                    </div>
+
                     <div class="form-floating mb-3">
                         <textarea wire:model='description' class="form-control @error('description') is-invalid @enderror"
                             placeholder="Description" id="floatingTextarea" style="height: 100px"></textarea>

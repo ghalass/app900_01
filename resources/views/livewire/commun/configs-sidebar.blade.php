@@ -43,18 +43,6 @@
             'count' => $pannes_count ?? 0,
         ],
         [
-            'title' => 'Type lubrifiants',
-            'route' => 'configs.typelubrifiants',
-            'icon' => 'bi bi-geo-alt',
-            'count' => $typelubrifiants_count ?? 0,
-        ],
-        [
-            'title' => 'Lubrifiants',
-            'route' => 'configs.lubrifiants',
-            'icon' => 'bi bi-geo-alt',
-            'count' => $lubrifiants_count ?? 0,
-        ],
-        [
             'title' => 'Type organes',
             'route' => 'configs.typeorganes',
             'icon' => 'bi bi-geo-alt',
@@ -65,6 +53,18 @@
             'route' => 'configs.organes',
             'icon' => 'bi bi-geo-alt',
             'count' => $organes_count ?? 0,
+        ],
+        [
+            'title' => 'Type lubrifiants',
+            'route' => 'configs.typelubrifiants',
+            'icon' => 'bi bi-geo-alt',
+            'count' => $typelubrifiants_count ?? 0,
+        ],
+        [
+            'title' => 'Lubrifiants',
+            'route' => 'configs.lubrifiants',
+            'icon' => 'bi bi-geo-alt',
+            'count' => $lubrifiants_count ?? 0,
         ],
     ];
 @endphp
