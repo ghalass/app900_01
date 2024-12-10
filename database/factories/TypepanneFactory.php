@@ -17,7 +17,8 @@ class TypepanneFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->sentence(1) . ' typepanne',
+            'description' => fake()->sentence(2) . ' desc',
         ];
     }
 }
