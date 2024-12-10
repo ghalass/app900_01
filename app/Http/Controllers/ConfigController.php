@@ -40,9 +40,9 @@ class ConfigController extends Controller
     {
         return view('configs.lubrifiants');
     }
-    public function typeporganes()
+    public function typeorganes()
     {
-        return view('configs.typeporganes');
+        return view('configs.typeorganes');
     }
     public function organes()
     {
