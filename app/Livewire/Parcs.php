@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Parc;
 use App\Models\Typeparc;
+use Illuminate\Database\Eloquent\Builder;
 use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -132,6 +133,9 @@ class Parcs extends Component
         } else {
             $parcs = Parc::where('name', 'like', '%' . $this->q . '%')
                 ->orWhere('description', 'like', '%' . $this->q . '%')
+                ->orWhereHas('typeparc', function (Builder $query) {
+                    $query->where('name', 'like', '%' . $this->q . '%');
+                })
                 ->orderBy('id', 'desc')
                 ->paginate($this->pagination);
         }

@@ -11,8 +11,8 @@
             <tr wire:key='{{ $parc->id }}'>
                 <td>{{ $parc->id }}</td>
                 <td>{{ $parc->name }}</td>
-                <td>{{ $parc->description }}</td>
                 <td>{{ $parc->typeparc->name }}</td>
+                <td>{{ $parc->description }}</td>
                 <td>
                     <div class="d-flex align-items-center justify-content-center">
                         <button wire:click="edit({{ $parc }})" wire:target='edit({{ $parc }})'
