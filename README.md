@@ -1,6 +1,6 @@
 # SITE
 
-## php artisan make:model Site
+#### php artisan make:model Site
 
 ## php artisan make:livewire sites
 
