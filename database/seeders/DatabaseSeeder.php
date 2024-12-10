@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Site;
+use App\Models\Typelubrifiant;
+use App\Models\Typeorgane;
+use App\Models\Typepanne;
 use App\Models\Typeparc;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -19,7 +22,13 @@ class DatabaseSeeder extends Seeder
 
         // Site::factory(10)->create();
 
-        Typeparc::factory(10)->create();
+        // Typeparc::factory(10)->create();
+
+        Typelubrifiant::factory(10)->create();
+
+        Typeorgane::factory(10)->create();
+
+        Typepanne::factory(10)->create();
 
         // User::factory()->create([
         //     'name' => 'Test User',
