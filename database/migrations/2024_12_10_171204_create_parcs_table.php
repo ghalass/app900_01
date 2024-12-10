@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('parcs', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->foreignId('typeparc_id')->constrained('typeparcs');
+            $table->string('description', 250)->nullable()->default('desc parc');
             $table->timestamps();
         });
     }

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('typelubrifiants', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->string('description', 250)->nullable();
             $table->timestamps();
         });
     }

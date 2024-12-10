@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('engins', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->foreignId('parc_id')->constrained('parcs');
+            $table->foreignId('site_id')->constrained('sites');
+            $table->string('description', 250)->nullable()->default('desc engin');
             $table->timestamps();
         });
     }

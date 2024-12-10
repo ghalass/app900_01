@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Lubrifiant extends Model
+class Panne extends Model
 {
     protected $fillable = [
         'name',
         'description',
-        'typelubrifiant_id',
+        'typepanne_id',
     ];
 
-    public function typelubrifiant(): BelongsTo
+    public function typepanne(): BelongsTo
     {
-        return $this->belongsTo(Typelubrifiant::class);
+        return $this->belongsTo(Typepanne::class);
     }
 }

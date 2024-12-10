@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('lubrifiants', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->foreignId('typelubrifiant_id')->constrained('typelubrifiants');
             $table->timestamps();
         });
     }
