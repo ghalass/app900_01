@@ -12,8 +12,6 @@ use Illuminate\Support\Str;
  */
 class UserFactory extends Factory
 {
-    use HasFactory;
-
     /**
      * The current password being used by the factory.
      */

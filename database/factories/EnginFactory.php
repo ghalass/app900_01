@@ -10,8 +10,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  */
 class EnginFactory extends Factory
 {
-    use HasFactory;
-
     /**
      * Define the model's default state.
      *
